@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 struct EulerTour{
     vector<int> in, out, depth;
     vector<int> visit; // the order of visited vertex

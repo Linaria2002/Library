@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 const long double EPS = 1e-8;
 template<class T> int GaussJordan(vector<vector<T>> &A, bool is_extended = false) {
     int m = A.size(), n = A[0].size();

@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T> struct Dijkstra{
     using DS = pair<T, int>;
     int N;

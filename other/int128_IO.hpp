@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 std::ostream &operator<<(std::ostream &dest, __int128_t value) {
   	std::ostream::sentry s(dest);
   	if (s) {

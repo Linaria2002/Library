@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 void MoSort(vector<tuple<int, int, int>> &Q, int N){
     const int M = sqrt(N);
     sort(Q.begin(), Q.end(), [&M](const tuple<int, int, int>& a, const tuple<int, int, int>& b){

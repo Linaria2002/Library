@@ -1,7 +1,4 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-// Ax + By = C (0 <= x < B)
+// find Ax + By = C (where 0 <= x < B)
 pair<int64_t, int64_t> extGcd(int64_t A, int64_t B, int64_t C = 1){
     if(C == 0) return {0, 0};
     if(B < 0) A = -A, B = -B, C = -C;

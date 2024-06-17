@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class Ford_Fulkerson{
 public:
     typedef pair<int, pair<ll, int>> to_cap_rev;

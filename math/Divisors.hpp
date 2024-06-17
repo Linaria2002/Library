@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 // O(NlogN)
 vector<vector<int>> divisors(int N){
     vector<vector<int>> res(N + 1);

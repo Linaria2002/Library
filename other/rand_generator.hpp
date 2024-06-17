@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T> struct rand_generator{
     mt19937_64 mt;
     uniform_int_distribution<uint64_t> rnd;

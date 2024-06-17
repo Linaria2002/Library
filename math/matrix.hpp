@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T>
 struct Matrix{
     T one = (1ll << 32) - 1;

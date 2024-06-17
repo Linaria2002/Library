@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class RollingHash{
     public:
     static const uint64_t MASK30 = (1ull << 30) - 1;

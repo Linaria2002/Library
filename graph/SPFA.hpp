@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 struct SPFA{
     using Pr = pair<int64_t, int>;
     int N;

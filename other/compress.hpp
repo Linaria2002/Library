@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 // vals[vec[id]] to decopress
 template<class T> vector<T> compress(vector<T> &vec){
     int sz = vec.size();

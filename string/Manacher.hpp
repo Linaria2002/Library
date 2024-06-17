@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 vector<int> Manacher(string &s){
     int sz = s.size();
     vector<int> res(sz, 0);

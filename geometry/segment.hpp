@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 // Required geometry
 // Required Line
 namespace geometry{

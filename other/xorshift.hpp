@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class xorshift{
     uint64_t state = time(nullptr);
     public:

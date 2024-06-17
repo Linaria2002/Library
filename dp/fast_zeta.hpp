@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T> vector<T> fast_zeta(int N, vector<T> &A){
     vector<T> dp(1 << N);
     for(int i = 0; i < (1 << N); i++){

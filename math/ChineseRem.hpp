@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 ll ExtGcd(ll a, ll b, ll &x, ll &y){
     ll d = a;
     if(b != 0){

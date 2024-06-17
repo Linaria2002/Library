@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class min_cost_flow2{
     using edge = struct{ int to, cap, cost, rev; };
     const int64_t Inf = 100100100100100100;

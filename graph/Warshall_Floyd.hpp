@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class Warshall_Floyd{
     vector<vector<ll>> dist;
     int size;

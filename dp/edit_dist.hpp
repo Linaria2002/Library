@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T> int edit_dist(T &s, T &t){
     int N = s.size(), M = t.size();
     vector<vector<int>> dp(N + 1, vector<int>(M + 1, N + M));
