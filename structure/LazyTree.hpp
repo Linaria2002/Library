@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class X, class M>
 class LazyTree{
     function<X(X, X)> fx = [](X x1, X x2){ return x1 + x2; };

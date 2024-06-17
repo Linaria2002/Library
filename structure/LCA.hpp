@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class LCA{
 public:
     vector<vector<int>> tree;

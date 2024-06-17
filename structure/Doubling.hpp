@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T>
 class Doubling{
     using Fnc = function<T(T, T)>;

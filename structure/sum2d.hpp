@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T>
 struct Sum2d{
     int H, W;

@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T> class UnionFind{
     vector<int> par, rank;
     vector<T> dat;

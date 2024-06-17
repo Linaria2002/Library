@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T>
 struct SetSegTree : public SegTree<T> {
     using SegTree<T>::SegTree;

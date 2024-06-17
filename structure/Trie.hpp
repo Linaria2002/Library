@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<int char_size, int base>
 class Trie{
     struct Node{

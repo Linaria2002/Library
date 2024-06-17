@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class Abel> struct WeightedUF{
     vector<int> par;
     vector<int> rank;
