@@ -1,7 +1,4 @@
 // ※テンプレート依存
-#include<bits/stdc++.h>
-using namespace std;
-
 // find y(0 <= y < mod) where modx + ay = 1
 ll modinv(ll a, ll mod){
     ll b = mod, y = 1, x = 0;

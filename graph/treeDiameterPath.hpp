@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T>
 pair<T, vector<int>> treeDiameterPath(vector<vector<pair<int, T>>> &G){
     vector<T> depth(G.size());

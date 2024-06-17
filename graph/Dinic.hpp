@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class Dinic{
     using edge = struct{
         ll to, cap, rev;

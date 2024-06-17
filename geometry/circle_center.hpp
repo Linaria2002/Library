@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T>
 complex<T> cricle_center(complex<T> a, complex<T> b, complex<T> c){
     complex<T> res = {0, 0};

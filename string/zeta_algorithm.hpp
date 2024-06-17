@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 vector<int> zeta_algorithm(string &s){
     vector<int> prefix(s.size());
     for(int i = 1, j = 0; i < s.size(); i++) {

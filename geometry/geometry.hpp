@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 namespace geometry{
     using Real = long double;
     using Point = complex<Real>;

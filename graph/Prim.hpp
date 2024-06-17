@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class Prim{
     int size;
     vvec<pair<ll, int>> G;

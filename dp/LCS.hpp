@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T> T LCS(T s, T t){
     int H = s.size(), W = t.size();
     vector<vector<int>> dp(H + 1, vector<int>(W + 1, 0));

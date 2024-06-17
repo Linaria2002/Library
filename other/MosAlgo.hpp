@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 template<class T> struct Mosalgo{
     void MoSort(vec<tuple<int, int, int>> &Q, int N){
         const int M = sqrt(N);

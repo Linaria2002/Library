@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 // [0, 2pi)
 template<class T>
 bool arg_cmp(const complex<T> &p, const complex<T> &q){

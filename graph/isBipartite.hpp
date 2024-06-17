@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 // Only for a connected graph
 bool isbip(vector<vector<int>> &G){
     int N = G.size();

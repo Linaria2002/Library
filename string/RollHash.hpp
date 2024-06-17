@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class RollHash{
     const int mod1 = 1e9+7;
     const int mod2 = 998244353;
