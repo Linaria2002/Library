@@ -1,5 +1,7 @@
-// Required geometry
-// Required Line
+#pragma once
+#include "geometry.hpp"
+#include "line.hpp"
+
 namespace geometry{
     struct Segment : Line{
         Segment() = default;

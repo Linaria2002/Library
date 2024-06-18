@@ -1,4 +1,6 @@
-// Required geometry
+#pragma once
+#include "geometry.hpp"
+
 namespace geometry{
     struct Line{
         Point a, b;

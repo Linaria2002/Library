@@ -1,3 +1,6 @@
+#pragma once
+#include "../structure/UnionFind.hpp"
+
 //G = (cost, to), create := construct a graph
 template<class T> T kruskal(vector<vector<pair<T, int>>> &G, bool create = false){
     using KrTpl = tuple<T, int, int, int>; 

@@ -1,10 +1,10 @@
 struct SPFA{
     using Pr = pair<int64_t, int>;
+    const long long INFTY = 1001001001001001001ll;
     int N;
-    const int64_t INFTY = 1001001001001001001ll;
-    vector<int64_t> dist;
-    vector<int> prev;
     vector<vector<Pr>> G;
+    vector<long long> dist;
+    vector<int> prev;
     vector<bool> inQue;
     vector<int> times;
 

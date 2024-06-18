@@ -1,7 +1,7 @@
 class min_cost_flow{
     using edge = struct{ int to, cap, cost, rev; };
     using P = pair<int64_t, int>;
-    const int64_t Inf = 100100100100100100;
+    const int64_t MF_INF = 100100100100100100;
     int N;
     vector<vector<edge>> G;
     vector<int64_t> h;
@@ -23,7 +23,7 @@ class min_cost_flow{
 
         while(f > 0){
             priority_queue<P, vector<P>, greater<P>> que;
-            fill(dist.begin(), dist.end(), Inf);
+            fill(dist.begin(), dist.end(), MF_INF);
             dist[s] = 0;
             que.push(P{0, s});
 
@@ -42,12 +42,12 @@ class min_cost_flow{
                 }
             }
 
-            if(dist[t] == Inf) return -1;
+            if(dist[t] == MF_INF) return -1;
             for(int i = 0; i < N; i++) h[i] += dist[i];
 
             int d = f;
             for(int v = t; v != s; v = prev_v[v]){
-                d = min((int64_t)d, G[prev_v[v]][prev_e[v]].cap);
+                d = min((int)d, G[prev_v[v]][prev_e[v]].cap);
             }
             f -= d;
             res += d * h[t];

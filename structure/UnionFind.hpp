@@ -1,3 +1,5 @@
+#pragma once
+
 template<class T> class UnionFind{
     vector<int> par, rank;
     vector<T> dat;
@@ -44,4 +46,4 @@ template<class T> class UnionFind{
     bool same(int x, int y){
         return find(x) == find(y);
     }
-}
+};

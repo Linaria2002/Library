@@ -1,3 +1,5 @@
+#pragma once
+
 namespace geometry{
     using Real = long double;
     using Point = complex<Real>;

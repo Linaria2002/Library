@@ -1,6 +1,6 @@
 class min_cost_flow2{
     using edge = struct{ int to, cap, cost, rev; };
-    const int64_t Inf = 100100100100100100;
+    const long long MF_INF = 100100100100100100ll;
     int N;
     vector<vector<edge>> G;
     vector<int64_t> dist;
@@ -19,14 +19,14 @@ class min_cost_flow2{
         int res = 0;
 
         while(f > 0){
-            fill(dist.begin(), dist.end(), Inf);
+            fill(dist.begin(), dist.end(), MF_INF);
             dist[s] = 0;
             bool update = 1;
 
             while(update){
                 update = 0;
                 for(int v = 0; v < N; v++){
-                    if(dist[v] == Inf) continue;
+                    if(dist[v] == MF_INF) continue;
                     for(int i = 0; i < (int)G[v].size(); i++){
                         edge &e = G[v][i];
                         if(e.cap > 0 && dist[e.to] > dist[v] + e.cost){
@@ -39,11 +39,11 @@ class min_cost_flow2{
                 }
             }
 
-            if(dist[t] == Inf) return -1;
+            if(dist[t] == MF_INF) return -1;
 
             int d = f;
             for(int v = t; v != s; v = prev_v[v]){
-                d = min((int64_t)d, G[prev_v[v]][prev_e[v]].cap);
+                d = min((int)d, G[prev_v[v]][prev_e[v]].cap);
             }
             f -= d;
             res += d * dist[t];

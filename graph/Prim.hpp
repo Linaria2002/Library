@@ -1,31 +1,33 @@
 class Prim{
+    const long long PRIM_INF = 1001001001001001001ll;
     int size;
-    vvec<pair<ll, int>> G;
-    vec<ll> dist;
-    vec<int> prev;
+    vector<vector<pair<long long, int>>> G;
+    vector<long long> dist;
+    vector<int> prev;
 
     public:
-    Prim(int N) : size(N), G(N), dist(N, LINF), prev(N, NIL) {}
-    void add_edge(int from, int to, ll cst){
-        G[from].eb(mkpr(cst, to));
+    Prim(int N) : size(N), G(N), dist(N, PRIM_INF), prev(N, -1) {}
+    void add_edge(int from, int to, long long cst){
+        G[from].emplace_back(make_pair(cst, to));
     }
-    ll solve(int R){
-        min_heap<tuple<ll, int, int>> heap;
+    long long solve(int R){
+        using PRIM_T = tuple<long long, int, int>;
+        priority_queue<PRIM_T, vector<PRIM_T>, greater<PRIM_T>> heap;
         dist[R] = 0, prev[R] = R;
         for(auto it : G[R]){
-            heap.push(mktpl(it.fi, R, it.se));
+            heap.push(make_tuple(it.first, R, it.second));
         }
 
-        ll res = 0;
+        long long res = 0;
         int num = 1;
         if(size == 1) return 0;
 
         while(!heap.empty()){
-            tuple<ll, int, int> T = heap.top();
+            tuple<long long, int, int> T = heap.top();
             heap.pop();
             int u = get<1>(T);
             int v = get<2>(T);
-            if(prev[v] != NIL) continue;
+            if(prev[v] != -1) continue;
 
             prev[v] = u;
             dist[v] = dist[u] + get<0>(T);
@@ -35,9 +37,9 @@ class Prim{
             if(num == size) return res;
 
             for(auto it : G[v]){
-                heap.push(mktpl(it.fi, v, it.se));
+                heap.push(make_tuple(it.first, v, it.second));
             }
         }
-        return NIL;
+        return -1;
     }
 };
