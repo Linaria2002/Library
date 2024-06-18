@@ -1,10 +1,10 @@
 class fast_factorize{
     int size;
-    vec<int> min_factor;
+    vector<int> min_factor;
 
     public:
     fast_factorize(int N) : size(N + 1), min_factor(N + 1) {
-        rep(i, size) min_factor[i] = i;
+        for(int i = 0; i < size; i++) min_factor[i] = i;
         for(int i = 2; i < size; i++){
             if(min_factor[i] == i){
                 for(int j = i + i; j < size; j += i){
@@ -25,10 +25,10 @@ class fast_factorize{
                     X /= m;
                     cnt++;
                 }
-                res.eb(mkpr(m, cnt));
+                res.emplace_back(make_pair(m, cnt));
             }
             else{
-                res.eb(mkpr(X, 1));
+                res.emplace_back(make_pair(X, 1));
                 break;
             }
         }

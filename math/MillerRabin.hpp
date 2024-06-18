@@ -1,3 +1,6 @@
+#pragma once
+#include "modpow.hpp"
+
 bool MillerRabin(__int128_t n){
     const int K = 7;
     static const __int128_t mod[7] = {2, 325, 9375, 28178, 450775, 9780504, 1795265022};

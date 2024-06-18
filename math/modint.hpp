@@ -19,9 +19,8 @@ template <int mod> struct modint{
         modint res(1);
         modint x = *this;
         for(long long exp = mod-2; exp; exp >>= 1){
-            if(exp & 1) res *= x; x *= x;
+            if(exp & 1){ res *= x; } x *= x;
         }
         return res;
     }
 };
-using mint = modint<MOD>;
