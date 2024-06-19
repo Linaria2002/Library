@@ -22,7 +22,7 @@ class Doubling{
             }
         }
     }
-    pair<int, T> query(int X, T Y, ll K){
+    pair<int, T> query(int X, T Y, long long K){
         for(int i = 0; K > 0; i++, K >>= 1){
             if(K & 1){
                 Y = fnc(Y, val[i][X]);

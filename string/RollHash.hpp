@@ -1,13 +1,13 @@
 class RollHash{
     const int mod1 = 1e9+7;
     const int mod2 = 998244353;
-    const int base = 557;
-    ll powb1 = 1, powb2 = 1;
-    ll invb1 = modinv(base, mod1), invb2 = modinv(base, mod2);
-    ll modinv(ll a, ll mod){
-        ll b = mod, y = 1, x = 0;
+    const int basecond = 557;
+    long long powb1 = 1, powb2 = 1;
+    long long invb1 = modinv(basecond, mod1), invb2 = modinv(basecond, mod2);
+    long long modinv(long long a, long long mod){
+        long long b = mod, y = 1, x = 0;
         while(b){
-            ll t = a / b;
+            long long t = a / b;
             a -= t * b; swap(a, b);
             y -= t * x; swap(y, x);
         }
@@ -16,7 +16,7 @@ class RollHash{
         return y;
     }
     void increment(){
-        powb1 *= base, powb2 *= base;
+        powb1 *= basecond, powb2 *= basecond;
         if(powb1 >= mod1) powb1 %= mod1;
         if(powb2 >= mod2) powb2 %= mod2;
     }
@@ -27,26 +27,26 @@ class RollHash{
     }
 
     public:
-    pair<ll, ll> hash = {0, 0};
+    pair<long long, long long> hash = {0, 0};
     void push_front(char c){
-        hash.fi = (hash.fi * base + c) % mod1;
-        hash.se = (hash.se * base + c) % mod2;
+        hash.first = (hash.first * basecond + c) % mod1;
+        hash.second = (hash.second * basecond + c) % mod2;
         increment();
     }
     void pop_front(char c){
         decrement();
-        hash.fi = (hash.fi - c + mod1) * invb1 % mod1;
-        hash.se = (hash.se - c + mod2) * invb2 % mod2;
+        hash.first = (hash.first - c + mod1) * invb1 % mod1;
+        hash.second = (hash.second - c + mod2) * invb2 % mod2;
     }
     void push_back(char c){
-        hash.fi = (hash.fi + powb1 * c) % mod1;
-        hash.se = (hash.se + powb2 * c) % mod2;
+        hash.first = (hash.first + powb1 * c) % mod1;
+        hash.second = (hash.second + powb2 * c) % mod2;
         increment();
     }
     void pop_back(char c){
         decrement();
-        hash.fi = (hash.fi - (c * powb1 % mod1) + mod1) % mod1;
-        hash.se = (hash.se - (c * powb2 % mod2) + mod2) % mod2;
+        hash.first = (hash.first - (c * powb1 % mod1) + mod1) % mod1;
+        hash.second = (hash.second - (c * powb2 % mod2) + mod2) % mod2;
     }
     bool same(RollHash h2){
         return hash == h2.hash;

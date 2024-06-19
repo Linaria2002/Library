@@ -1,3 +1,6 @@
+#pragma once
+#include "SegTree.hpp"
+
 template<class T> struct Healthy2DSegTree{
     function<T(T, T)> Fnc = [](T a, T b){return a + b;};
     T E = 0;

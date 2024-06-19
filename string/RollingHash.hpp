@@ -26,7 +26,7 @@ class RollingHash{
         return res;
     }
     void expand(int sz){
-        if(power.size() < sz + 1){
+        if((int)power.size() < sz + 1){
             int pre_sz = power.size();
             power.resize(sz + 1);
             for(int i = pre_sz - 1; i < sz; i++){

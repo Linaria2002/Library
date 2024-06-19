@@ -1,3 +1,4 @@
+#pragma once
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -112,7 +113,3 @@ template<class T> bool chmin(T &a, T b){ return a > b ? (a = b, true) : 0;}
 template<class T> bool chmax(T &a, T b){ return a < b ? (a = b, true) : 0;}
 
 #include "atcoder/modint.hpp"
-
-int main(){
-    set_fast_ios(10);
-}
