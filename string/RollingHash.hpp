@@ -1,3 +1,5 @@
+#pragma once
+
 class RollingHash{
     public:
     static const uint64_t MASK30 = (1ull << 30) - 1;
@@ -12,6 +14,9 @@ class RollingHash{
         mt19937_64 mt(chrono::steady_clock::now().time_since_epoch().count());
         uniform_int_distribution< uint64_t > rand(1ull << 32, RollingHash::_MOD - 1);
         return rand(mt);
+    }
+    uint64_t Add(uint64_t a, uint64_t b){
+        return CalcMod(a + b);
     }
     uint64_t Mul(uint64_t a, uint64_t b){
         uint64_t au = a >> 31, ad = a & MASK31, bu = b >> 31, bd = b & MASK31;
