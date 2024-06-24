@@ -7,7 +7,7 @@ class SparseTable{
     public:
     SparseTable(const vector<T> &V){
         int b = 0;
-        while((1 << b) <= V.size()) b++;
+        while((1 << b) <= (int)V.size()) b++;
         dat.resize(b, vector<T>(1 << b));
         for(int i = 0; i < (int)V.size(); i++){
             dat[0][i] = V[i];
